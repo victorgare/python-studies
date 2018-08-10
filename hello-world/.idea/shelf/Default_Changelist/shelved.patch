@@ -1,0 +1,18 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision c9d9e43a1ca6d909e354cc079956518d1449066b)
++++ .idea/workspace.xml	(revision c9d9e43a1ca6d909e354cc079956518d1449066b)
+@@ -1,9 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectFrameBounds">
+-    <option name="x" value="15" />
+-    <option name="y" value="30" />
+-    <option name="width" value="1890" />
+-    <option name="height" value="930" />
+-  </component>
+-</project>
+\ No newline at end of file

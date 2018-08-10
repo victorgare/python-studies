@@ -54,5 +54,19 @@ x[::-1]
 def soma2(a, b=2):
     return a + b
 
+
 soma2(6)
 soma2(2, 1)
+
+
+# fibonacci
+
+def fibo(n):
+    if n < 1:
+        print("O valor de n deve ser > 1")
+        return
+    elif n == 1 or n == 2:
+        return 1
+
+    else:
+        return fibo(n - 1) + fibo(n - 2)
