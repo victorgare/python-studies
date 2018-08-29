@@ -40,3 +40,35 @@ plt.imshow(imgray2, cmap='gray')
 # mostra o histograma da imagem do imgray2
 plt.figure() # cria uma nova janela grafica
 plt.hist(imgray2.ravel(), bins=256)
+
+# aumenta o contraste
+mult = 2
+adic = -200
+imgray3 = cv2.convertScaleAbs(imgray, alpha=mult, beta=adic)
+plt.figure()
+plt.imshow(imgray3, cmap='gray')
+
+plt.figure() # cria uma nova janela grafica
+plt.hist(imgray3.ravel(), bins=256)
+
+
+# diminui o contraste
+mult = 0.5
+adic = 100
+imgray4 = cv2.convertScaleAbs(imgray, alpha=mult, beta=adic)
+plt.figure()
+# importa o normalizer que servira para ajustar a escala do grafico
+from matplotlib.colors import Normalize
+plt.imshow(imgray4, cmap='gray', norm=Normalize(vmin=0, vmax=255))
+
+plt.figure() # cria uma nova janela grafica
+plt.hist(imgray4.ravel(), bins=256)
+plt.xlim([0, 255])
+
+# equaliza o histograma
+imgray5 = cv2.equalizeHist(imgray4)
+plt.figure()
+plt.imshow(imgray5, cmap='gray', norm=Normalize(vmin=0, vmax=255))
+plt.figure()
+plt.hist(imgray5.ravel(), bins=256)
+plt.xlim([0, 255])
